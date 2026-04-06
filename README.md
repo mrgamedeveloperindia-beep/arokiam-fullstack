@@ -1,6 +1,6 @@
 # 🚀 Arokiam - Premium Health & Nutrition Platform
 
-[![Vercel Deploy](https://vercel.com/button)](https://vercel.com/new/git/external?repository=https://github.com/YOURUSERNAME/arokiam-fullstack)
+[![Vercel Deploy](https://vercel.com/button)](https://vercel.com/new/git/external?repository=https://github.com/mrgamedeveloperindia-beep/arokiam-fullstack)
 
 ## ✨ Features
 ✅ Your exact design preserved  
