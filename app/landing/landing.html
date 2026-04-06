@@ -1,0 +1,1022 @@
+
+<body class="no-scroll">
+
+<div id="gate-overlay" class="step-1">
+  <div class="gate-card">
+    <div id="gate-s1">
+      <div style="text-align: center; margin-bottom: 1.5rem; position: relative; perspective: 1000px;">
+        <div style="display: block;">
+            <h1 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 900; color: hsl(140, 92%, 19%); letter-spacing: -2px; margin: 0; line-height: 1; display: inline-block;">
+                Arokiam<span style="font-family: 'Plus Jakarta Sans', sans-serif; color: hsl(41, 100%, 37%); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0; margin-left: 2px;">.in</span>
+            </h1>
+        </div>
+        <div style="margin-top: 0.5px; display: flex; align-items: center; justify-content: center; gap: 15px;">
+            <div style="height: 1px; width: 30px; background: rgba(0,0,0,0.06);"></div>
+            <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.65rem; color: #64748b; font-weight: 800; letter-spacing: 4px; text-transform: uppercase;">
+                Premium Nutrition
+            </span>
+            <div style="height: 1px; width: 30px; background: rgba(0,0,0,0.06);"></div>
+        </div>
+      </div>
+
+      <div class="brand-hook" style="text-align: center; margin-top: 0.2rem; margin-bottom: 0.5rem;">
+        <p class="gate-sub" style="color: #444; font-size: 0.95rem; margin-bottom: 1.6rem;">
+            <b>Busy day? Let Arokiam handle your nutrition.</b><br>
+            We’re accepting only 10 new members this week.
+        </p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:1.2rem; text-align: left;">
+        <div>
+            <label class="field-label" for="inp-name">Your Good Name <span>*</span></label>
+            <input class="field-input" type="text" id="inp-name" placeholder="eg. Mano Bharathi" maxlength="15" autocomplete="name" style="border-radius: 8px; padding: 12px; border: 1px solid #ddd; width: 100%; font-weight: 600;"/>
+        </div>
+
+        <div>
+            <label class="field-label" for="inp-phone">WhatsApp Number <span>*</span></label>
+            <div class="phone-wrap" style="border-radius: 8px; border: 1px solid #ddd; display: flex; align-items: center; overflow: hidden; background: #fff;">
+                <span class="phone-prefix" style="background: #f8f8f8; padding: 12px; border-right: 1px solid #ddd; font-weight: bold; color: #555;">+91</span>
+                <input type="tel" id="inp-phone" placeholder="98765 43210" maxlength="10" style="border: none; padding: 12px; width: 100%; outline: none; font-weight: 600;" oninput="this.value=this.value.replace(/\D/g,'');"/>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 0.5rem;">
+            <button class="btn-gate btn-gate-green" onclick="AuthEngine.saveStep1()" style="width: 100%; padding: 1.1rem; font-size: 1.1rem; font-weight: bold; border-radius: 12px; background-color: #2e7d32; color: white; border: none; cursor: pointer; box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);">
+                Join the Arokiam Journey →
+            </button>
+            <p class="gate-sub" style="font-style: italic; color: #666; font-size: 0.85rem; margin-top: 1.2rem; margin-bottom: 1.0rem;">
+                “If it doesn’t challenge you, it won’t change you.”
+            </p>
+
+            <div style="display: flex; justify-content: center; gap: 8px; margin-top: 17.0px;">
+                <span class="badge">Farm Fresh</span>
+                <span class="badge">Chef Crafted</span>
+                <span class="badge">Daily Delivery</span>
+            </div>
+
+            <p style="font-size: 0.85rem; color: #444; margin-top: 15px;">Unlock <b>10% OFF</b> + a <b>Free Detox Drink</b></p>
+            <p style="font-size: 0.7rem; color: #999; margin-top: 6px;">🔒 Your data is safe with Arokiam.</p>
+        </div>
+      </div>
+
+      <div class="step-dots" style="margin-top:1.6rem;">
+        <div class="step-dot on" id="sd1"></div>
+        <div class="step-dot" id="sd2"></div>
+        <div class="step-dot" id="sd3"></div>
+      </div>
+
+      <div style="background: #fff3e0; margin: 20px -20px -20px -20px; padding: 12px; border-top: 1px solid #ffe0b2; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+        <p style="margin: 0; color: #e65100; font-size: 0.9rem; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <span style="height: 8px; width: 8px; background: #e65100; border-radius: 50%; display: inline-block; animation: pulse-orange 2s infinite;"></span>
+            🔥 <span id="view-count">12</span> people are viewing Arokiam right now
+        </p>
+      </div>
+    </div>
+
+    <div id="gate-s2" style="display:none; text-align: center;"> 
+      <div style="width:64px; height:64px; border-radius:20px; background:var(--brand-light); color:var(--brand); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 1rem">
+        <i class="fa-solid fa-leaf"></i>
+      </div>
+      <h2 class="gate-title">Your Health Goal</h2>
+      <p class="gate-sub">Which journey are we starting today?</p>
+      <div class="journey-grid" style="margin-top:1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <button class="journey-opt" onclick="AuthEngine.selectGoal('Weight Loss')"><span class="j-icon">⚖️</span><span class="j-label">Weight Loss</span></button>
+        <button class="journey-opt" onclick="AuthEngine.selectGoal('Skin Care')"><span class="j-icon">✨</span><span class="j-label">Skin Care</span></button>
+        <button class="journey-opt" onclick="AuthEngine.selectGoal('Diabetes Care')"><span class="j-icon">🩸</span><span class="j-label">Diabetes</span></button>
+        <button class="journey-opt" onclick="AuthEngine.selectGoal('Gym & Fitness')"><span class="j-icon">💪</span><span class="j-label">Gym & Fitness</span></button>
+      </div>
+      <button onclick="AuthEngine.gotoStep(1)" style="margin-top:2rem; display:block; width:100%; text-align:center; font-size:.85rem; font-weight:700; color:#94a3b8; text-decoration:underline; background:none; border:none; cursor:pointer;">Back to details</button>
+      <div class="step-dots" style="margin-top:2rem;">
+        <div class="step-dot" id="sd1b"></div>
+        <div class="step-dot on" id="sd2b"></div>
+        <div class="step-dot" id="sd3b"></div>
+      </div>
+    </div>
+
+    <div id="gate-s3" style="display:none; text-align:center;">
+      <div class="success-tick" style="width: 80px; height: 80px; background: #e8f5e9; color: #2e7d32; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem; animation: pulse 2s infinite;">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h2 class="gate-title">Identity Verified</h2>
+      <p class="gate-sub">Your profile is ready, <span id="display-name-final" style="font-weight: 800; color: #2e7d32;"></span>! Welcome to Arokiam.</p>
+      <button class="btn-gate btn-gate-dark" style="margin-top:2rem; width: 100%; padding: 1.2rem; background: #0f172a; color: white; border-radius: 12px; font-weight: 900; border: none; cursor: pointer;" onclick="AuthEngine.unlockDashboard()">
+        START YOUR AROKIAM JOURNEY
+      </button>
+      <div class="step-dots" style="margin-top:2rem;">
+        <div class="step-dot" id="sd1c"></div>
+        <div class="step-dot" id="sd2c"></div>
+        <div class="step-dot on" id="sd3c"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<header>
+  <div class="header-inner">
+    <a class="header-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <div class="header-logo-icon"><i class="fa-solid fa-leaf"></i></div>
+      <span class="logo-script">Arokiam<span class="logo-dot-in">.in</span></span>
+    </a>
+    <div class="header-location" style="display:flex;">
+      <i class="fa-solid fa-location-dot"></i>
+      <span style="font-size:.78rem;font-weight:700;">TINDIVANAM, TN</span>
+      <i class="fa-solid fa-chevron-down" style="color:#94a3b8;font-size:.65rem;margin-left:.3rem;"></i>
+    </div>
+    <div class="search-bar">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="search-input" placeholder="Search Mealboxes, Cold Pressed Juices, Pickles, powders..." onkeyup="handleSearch(event)"/>
+    </div>
+    <div class="hdr-actions">
+      <button class="btn-start-free" id="hdr-start-free" onclick="openGate()">Start for free</button>
+      <button class="btn-hdr-outline" id="hdr-signup" onclick="openGate()">Sign up</button>
+      <button class="btn-hdr-outline" id="hdr-login" onclick="openGate()">Log in</button>
+      <div class="user-avatar" id="hdr-avatar" style="display:none;" title="Profile">M</div>
+      <button class="cart-btn" onclick="toggleCart()">
+        <i class="fa-solid fa-basket-shopping" style="color:#64748b;"></i>
+        <span id="cart-btn-label" style="font-weight:800;">Cart</span>
+        <div class="cart-badge" id="cart-badge">0</div>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="cta-section reveal" style="margin-top:2rem; padding:6rem 1.5rem; text-align:center; background:#0f172a; border-radius: 0 0 40px 40px;">
+    <div style="max-width:800px; margin:0 auto">
+        <div style="display:inline-flex; align-items:center; gap:0.5rem; background:rgba(255,255,255,0.1); color:#4ade80; font-size:0.75rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; padding:0.5rem 1.25rem; border-radius:99px; margin-bottom:2rem;">
+            <i class="fa-solid fa-sparkles"></i> Your transformation begins here
+        </div>
+        <div class="hero-welcome-badge" id="hero-welcome-badge" style="display:none; margin: 0 auto 1rem;">
+            <i class="fa-solid fa-sparkles"></i> <span id="hero-welcome-text">MANO, WELCOME TO AROKIAM</span>
+        </div>
+        <h2 class="font-display" style="font-size:3.5rem; font-weight:900; color:#fff; line-height:1.1; margin-bottom:1.5rem; letter-spacing:-0.03em;" id="hero-title">
+            Premium meals that move you from <span class="accent" style="color:var(--brand);">single order</span> to <span class="accent" style="color:var(--brand);">subscription</span>.
+        </h2>
+        <p style="color:rgba(255,255,255,0.6); font-size:1.1rem; font-weight:500; line-height:1.6; margin-bottom:2.5rem; max-width:600px; margin-left:auto; margin-right:auto;">
+            Premium meals built for your goals. Transparent ingredients, and a structured 100-day roadmap tailored to your health goal.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center">
+            <button class="btn" style="padding:1rem 2rem; border-radius:12px; font-weight:800; font-size:1rem; border:2px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.1); color:#fff; cursor:pointer;" onclick="document.getElementById('journey-section').scrollIntoView({behavior:'smooth'})">
+                Explore Plans
+            </button>
+            <button class="btn" style="padding:1rem 2.5rem; border-radius:12px; font-weight:800; font-size:1rem; border:none; background:#22c55e; color:#fff; cursor:pointer; display:flex; align-items:center; gap:0.75rem; box-shadow: 0 10px 20px rgba(34,197,94,0.3);" onclick="window.open('https://wa.me/919876543210?text='+encodeURIComponent('Hi Arokiam! I want to start my health journey.'),'_blank')">
+                <i class="fa-brands fa-whatsapp" style="font-size:1.2rem"></i> Talk to Us
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="reveal" style="max-width:1200px; margin:-4rem auto 0; padding:0 1.5rem 4rem; position:relative; z-index:10;">
+    <div class="card" style="background:#fff; padding:3rem; border-radius:32px; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; box-shadow:0 25px 50px -12px rgba(0,0,0,0.1);">
+        <div>
+            <div style="display:inline-flex; align-items:center; gap:0.5rem; background:#f0fdf4; color:#16a34a; font-size:0.7rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; padding:0.4rem 1rem; border-radius:8px; margin-bottom:1.5rem;">
+                <i class="fa-solid fa-utensils"></i> Custom Menu
+            </div>
+            
+            <h2 class="font-display" style="font-size:2.5rem; font-weight:900; color:#0f172a; line-height:1.2; margin-bottom:1rem">Talk to us on WhatsApp</h2>
+            
+            <p style="color:#64748b; font-size:1rem; font-weight:500; line-height:1.6; margin-bottom:2rem">
+                Ask for a custom meal plan, journey mix, or subscription setup tailored to your needs.
+            </p>
+            
+            <ul style="list-style:none; padding:0; margin:0 0 2.5rem 0; display:flex; flex-direction:column; gap:1rem">
+                <li style="display:flex; align-items:flex-start; gap:0.8rem; font-size:0.95rem; font-weight:600; color:#334155">
+                    <i class="fa-solid fa-circle-check" style="color:#22c55e; margin-top:3px; font-size:1.1rem"></i>
+                    Custom menu for weight loss, skin care, gym, diabetes, and more.
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:0.8rem; font-size:0.95rem; font-weight:600; color:#334155">
+                    <i class="fa-solid fa-circle-check" style="color:#22c55e; margin-top:3px; font-size:1.1rem"></i>
+                    Need a different weekly or monthly mix? We can build it.
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:0.8rem; font-size:0.95rem; font-weight:600; color:#334155">
+                    <i class="fa-solid fa-circle-check" style="color:#22c55e; margin-top:3px; font-size:1.1rem"></i>
+                    Use WhatsApp for quick support and fast order confirmation.
+                </li>
+            </ul>
+            
+            <button style="padding:1rem 2rem; border-radius:12px; font-weight:800; font-size:1rem; border:none; background:#22c55e; color:#fff; cursor:pointer; display:flex; align-items:center; gap:0.75rem;" onclick="window.open('https://wa.me/919876543210?text='+encodeURIComponent('Hi Arokiam! I need a custom menu.'),'_blank')">
+                <i class="fa-brands fa-whatsapp" style="font-size:1.2rem"></i> Talk to Us in WhatsApp
+            </button>
+        </div>
+        
+        <div style="position:relative">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=600&fit=crop" alt="Healthy Plate" style="width:100%; height:400px; object-fit:cover; border-radius:24px;">
+            
+            <div style="position:absolute; bottom:20px; left:20px; background:#fff; padding:1rem 1.5rem; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.15); display:flex; align-items:center; gap:1rem; border: 1px solid #f1f5f9;">
+                <div style="width:44px; height:44px; border-radius:12px; background:#f0fdf4; color:#22c55e; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">
+                    <i class="fa-solid fa-comment-dots"></i>
+                </div>
+                <div>
+                    <div style="font-weight:800; font-size:0.9rem; color:#0f172a">Quick response</div>
+                    <div style="font-size:0.75rem; color:#64748b; font-weight:500;">Usually under 5 minutes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="journey-section" style="max-width:1440px; margin:0 auto; padding:4rem 1.5rem">
+    <div style="margin-bottom: 2rem; display: flex; align-items: flex-end; justify-content: space-between;">
+        <div>
+            <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #0f172a; letter-spacing: -1px; margin: 0;">
+                Choose Your Health Journey
+            </h2>
+            <p style="color: #64748b; font-size: 1rem; font-weight: 500; margin-top: 0.4rem;">
+                Explore scientifically designed monthly subscription plans and curated menus tailored to your specific body goals.
+            </p>
+        </div>
+        
+        <div style="color: #cbd5e1; font-size: 1.2rem; display: flex; gap: 10px;">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-right" style="color: #22c55e;"></i>
+        </div>
+    </div>
+
+    <div class="journey-scroller-container hide-scroll">
+        <div class="journey-scroller-track" id="journey-circles">
+            
+            <div class="journey-scroller-item journey-circle" onclick="selectPlanJourney('Weight Loss')">
+                <div class="j-circle-wrap"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=250&h=250&fit=crop"></div>
+                <h3 class="j-name">Weight Loss</h3>
+            </div>
+
+            <div class="journey-scroller-item journey-circle" onclick="selectPlanJourney('Skin Care')">
+                <div class="j-circle-wrap"><img src="https://images.unsplash.com/photo-1514996937319-344454492b37?w=250&h=250&fit=crop"></div>
+                <h3 class="j-name">Skin Care</h3>
+            </div>
+
+            <div class="journey-scroller-item journey-circle" onclick="selectPlanJourney('Diabetes Care')">
+                <div class="j-circle-wrap"><img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=250&h=250&fit=crop"></div>
+                <h3 class="j-name">Diabetes</h3>
+            </div>
+
+            <div class="journey-scroller-item journey-circle" onclick="selectPlanJourney('Gym & Fitness')">
+                <div class="j-circle-wrap"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=250&h=250&fit=crop"></div>
+                <h3 class="j-name">Fitness</h3>
+            </div>
+
+            <div class="journey-scroller-item journey-circle" onclick="selectPlanJourney('Heart Care')">
+                <div class="j-circle-wrap"><img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=250&h=250&fit=crop"></div>
+                <h3 class="j-name">Heart Care</h3>
+            </div>
+
+            <div class="journey-scroller-item journey-circle" onclick="selectPlanJourney('Hypertension')">
+                <div class="j-circle-wrap"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=250&h=250&fit=crop"></div>
+                <h3 class="j-name">Low Sodium</h3>
+            </div>
+
+            <div class="journey-scroller-item journey-circle" onclick="selectPlanJourney('Kidney Care')">
+                <div class="j-circle-wrap"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=250&h=250&fit=crop"></div>
+                <h3 class="j-name">Kidney Care</h3>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="section">
+  <div class="filters-card">
+    <div class="filters-head">
+      <div>
+        <div class="filters-title">Smart filters for faster buying</div>
+        <div class="filters-sub">Choose a category, then layer diet filters on top.</div>
+      </div>
+      <button class="btn-clear-filters" id="clear-filters-btn" onclick="clearAllFilters()">✕ Clear filters</button>
+    </div>
+    <div class="chip-row hide-scroll">
+      <button class="chip on" onclick="applyCategory('All',this)"><i class="fa-solid fa-border-all"></i>All</button>
+      <button class="chip" onclick="applyCategory('Mealbox',this)"><i class="fa-solid fa-box-open"></i>Mealbox</button>
+      <button class="chip" onclick="applyCategory('Fresh',this)"><i class="fa-solid fa-leaf"></i>Fresh</button>
+      <button class="chip" onclick="applyCategory('Monthly',this)"><i class="fa-solid fa-calendar-days"></i>Monthly</button>
+      <button class="chip" onclick="applyCategory('Weekly',this)"><i class="fa-solid fa-calendar-week"></i>Weekly</button>
+      <button class="chip" onclick="applyCategory('Dairy',this)"><i class="fa-solid fa-cow"></i>Milk &amp; Dairy</button>
+      <button class="chip" onclick="applyCategory('Powders',this)"><i class="fa-solid fa-mortar-pestle"></i>Powders</button>
+      <button class="chip" onclick="applyCategory('Pickles Veg',this)"><i class="fa-solid fa-pepper-hot"></i>Veg Pickles</button>
+      <button class="chip" onclick="applyCategory('Pickles Non-Veg',this)"><i class="fa-solid fa-drumstick-bite"></i>Non-Veg Pickles</button>
+      <button class="chip" onclick="applyCategory('Drinks',this)"><i class="fa-solid fa-mug-hot"></i>Drinks</button>
+      <button class="chip" onclick="applyCategory('Dry Fruits',this)"><i class="fa-solid fa-seedling"></i>Dry Fruits</button>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="menu-section">
+  <div class="menu-header">
+    <div>
+      <div class="menu-title-big" id="menu-title">Explore Entire Menu</div>
+      <div style="margin-top:.4rem;display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;">
+        <span class="menu-count-pill" id="menu-count">Showing 41 items</span>
+      </div>
+    </div>
+    <button class="btn-need-custom" onclick="openModal('custom-modal')">Need a custom menu?</button>
+  </div>
+  
+  <div class="diet-refine" style="margin-bottom: 2rem;">
+    <span class="diet-refine-label">Refine Menu by Diet:</span>
+    <button class="diet-chip" onclick="toggleDiet('Veg')">Veg</button>
+    <button class="diet-chip" onclick="toggleDiet('Eggtarian')">Eggtarian</button>
+    <button class="diet-chip" onclick="toggleDiet('Non-Veg')">Non-Veg</button>
+    <button class="diet-chip" onclick="toggleDiet('Red Meat')">Red Meat</button>
+  </div>
+
+  <div class="product-grid" id="product-grid"></div>
+  
+  <div class="empty-state" id="empty-state">
+    <i class="fa-solid fa-utensils"></i>
+    <h3>No items found</h3>
+    <p>Try reducing diet filters or changing category.</p>
+    <button class="btn-gate btn-gate-green" style="margin-top:1.2rem;max-width:200px;" onclick="clearAllFilters()">Clear filters</button>
+  </div>
+</div>
+
+<div class="section" id="plans-section">
+  <div class="plans-section">
+    <div class="plans-body">
+      <div class="plans-header-row">
+        <div>
+          <div class="plans-label">Monthly Plans</div>
+          <div class="plans-journey-title" id="plan-journey-title">Gym &amp; Fitness Programs</div>
+          <div class="plans-journey-sub" id="plan-journey-sub">High protein, carefully calculated macros for bulking or shredding athletic goals.</div>
+        </div>
+        <button class="btn-transparency" onclick="openModal('journey-modal'); openJourneyModal(currentPlanJourney);">
+          <i class="fa-solid fa-shield-heart"></i> Cost &amp; Ingredient Transparency
+        </button>
+      </div>
+
+      <div class="commitment-label">SELECT YOUR COMMITMENT LEVEL</div>
+      <div class="plan-tiers">
+        <div class="tier-card">
+          <div class="tier-tag std">Standard</div>
+          <div class="tier-name">Entry Level Reset</div>
+          <div class="tier-desc">Basic menu built for people who want to start without overwhelming changes.</div>
+          <ul class="tier-features">
+            <li><i class="fa-solid fa-check fi-std"></i>Base organic vegetables</li>
+            <li><i class="fa-solid fa-check fi-std"></i>Pre-set weekly menu</li>
+            <li><i class="fa-solid fa-check fi-std"></i>Basic macro tracking</li>
+          </ul>
+          <div class="tier-price" id="tier-price-std">₹4,999<span>/mo</span></div>
+          <button class="btn-tier btn-tier-std" onclick="applyPlanToMenu('Standard')">Subscribe</button>
+        </div>
+        <div class="tier-card featured">
+          <div class="most-popular-badge">MOST POPULAR</div>
+          <div class="tier-tag prm">Premium</div>
+          <div class="tier-name">Targeted Nutrition</div>
+          <div class="tier-desc">Balanced plan with upgraded ingredients and one consultation point.</div>
+          <ul class="tier-features">
+            <li><i class="fa-solid fa-check fi-prm"></i>Targeted ingredients (e.g. Paneer, Lean Meats)</li>
+            <li><i class="fa-solid fa-check fi-prm"></i>Daily specific Juices/Drinks</li>
+            <li><i class="fa-solid fa-check fi-prm"></i>1 Free Nutritionist Check-in</li>
+          </ul>
+          <div class="tier-price" id="tier-price-prm">₹6,999<span>/mo</span></div>
+          <button class="btn-tier btn-tier-prm" onclick="applyPlanToMenu('Premium')">Subscribe Premium</button>
+        </div>
+        <div class="tier-card elite-card">
+          <div class="tier-tag elt">Elite</div>
+          <div class="tier-name">Total Customization</div>
+          <div class="tier-desc">For customers who want complete control, premium ingredients, and higher support.</div>
+          <ul class="tier-features">
+            <li><i class="fa-solid fa-star fi-elt"></i>Exotic ingredients (Berries, Salmon, Matcha)</li>
+            <li><i class="fa-solid fa-star fi-elt"></i>Highly customized macros daily</li>
+            <li><i class="fa-solid fa-star fi-elt"></i>Weekly 1-on-1 calls</li>
+          </ul>
+          <div class="tier-price" id="tier-price-elt">₹9,999<span>/mo</span></div>
+          <button class="btn-tier btn-tier-elt" onclick="applyPlanToMenu('Elite')">Get Elite</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="how-section" style="padding: 5rem 2rem; background: #fff; position: relative; overflow: hidden; margin-top:2rem;">
+    <div style="text-align: center; margin-bottom: 4rem;">
+        <span style="color: var(--brand); font-weight: 800; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; background: var(--brand-light); padding: 6px 16px; border-radius: 50px;">The Arokiam Way</span>
+        <h2 style="font-size: 2.2rem; font-weight: 900; color: #0f172a; margin-top: 1rem;">Seamless Health in 3 Steps</h2>
+    </div>
+
+    <div class="how-steps-container">
+        <div class="step-connector"></div>
+        <div class="how-steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; position: relative; z-index: 2;">
+            <div class="how-step-card">
+                <div class="step-number">01</div>
+                <div class="how-icon-wrap" style="background:#f5f3ff;"><i class="fa-solid fa-wand-magic-sparkles" style="color:#7c3aed;"></i></div>
+                <h3 class="how-step-name">Pick Your Path</h3>
+                <p class="how-step-desc">Browse 60+ nutritionist-coded meals. Filter by your goal—Weight Loss, Gym, or Skin Care—and find your perfect match.</p>
+            </div>
+            <div class="how-step-card">
+                <div class="step-number">02</div>
+                <div class="how-icon-wrap" style="background:#fff7ed;"><i class="fa-brands fa-whatsapp" style="color:#ea580c;"></i></div>
+                <h3 class="how-step-name">WhatsApp Checkout</h3>
+                <p class="how-step-desc">No complex logins. Add to cart and hit order. Your plan syncs directly with our team via WhatsApp for instant confirmation.</p>
+            </div>
+            <div class="how-step-card">
+                <div class="step-number">03</div>
+                <div class="how-icon-wrap" style="background:#f0fdf4;"><i class="fa-solid fa-box-tissue" style="color:#16a34a;"></i></div>
+                <h3 class="how-step-name">Fuel Your Body</h3>
+                <p class="how-step-desc">Freshly prepped by chefs and delivered in 90 mins. Start your 100-day roadmap with a meal that actually works.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section" style="margin-top:2rem;">
+  <div class="popular-section">
+    <div class="sec-title" style="font-size:1.1rem;">Popular Searches</div>
+    <div style="margin-top:.8rem;display:flex;flex-direction:column;gap:.5rem;">
+      <div class="pop-row">
+        <span class="pop-lbl">Products</span>
+        <span class="pop-link">Avocado Salad</span><span class="pop-sep">|</span>
+        <span class="pop-link">ABC Juice</span><span class="pop-sep">|</span>
+        <span class="pop-link">High Protein Chicken</span><span class="pop-sep">|</span>
+        <span class="pop-link">Keto Box</span><span class="pop-sep">|</span>
+        <span class="pop-link">A2 Milk</span><span class="pop-sep">|</span>
+        <span class="pop-link">Millet Khichdi</span><span class="pop-sep">|</span>
+        <span class="pop-link">Dry Fish</span><span class="pop-sep">|</span>
+        <span class="pop-link">Collagen Bowl</span><span class="pop-sep">|</span>
+        <span class="pop-link">Flaxseed</span><span class="pop-sep">|</span>
+        <span class="pop-link">Whey Protein</span><span class="pop-sep">|</span>
+        <span class="pop-link">Paneer Box</span>
+      </div>
+      <div class="pop-row">
+        <span class="pop-lbl">Plans</span>
+        <span class="pop-link">7-Day Keto</span><span class="pop-sep">|</span>
+        <span class="pop-link">Diabetes Care Box</span><span class="pop-sep">|</span>
+        <span class="pop-link">Heart Care Diet</span><span class="pop-sep">|</span>
+        <span class="pop-link">Weight Loss Shred</span><span class="pop-sep">|</span>
+        <span class="pop-link">Muscle Gain Bulk</span><span class="pop-sep">|</span>
+        <span class="pop-link">Vegan Detox</span><span class="pop-sep">|</span>
+        <span class="pop-link">Hypertension Diet</span>
+      </div>
+      <div class="pop-row">
+        <span class="pop-lbl">Categories</span>
+        <span class="pop-link">Fresh Meals</span><span class="pop-sep">|</span>
+        <span class="pop-link">Dairy Products</span><span class="pop-sep">|</span>
+        <span class="pop-link">Mealboxes</span><span class="pop-sep">|</span>
+        <span class="pop-link">Health Powders</span><span class="pop-sep">|</span>
+        <span class="pop-link">Pickles</span><span class="pop-sep">|</span>
+        <span class="pop-link">Detox Drinks</span><span class="pop-sep">|</span>
+        <span class="pop-link">Dry Fish</span><span class="pop-sep">|</span>
+        <span class="pop-link">Vegan Options</span><span class="pop-sep">|</span>
+        <span class="pop-link">Zero Sugar</span><span class="pop-sep">|</span>
+        <span class="pop-link">Low Sodium</span>
+      </div>
+    </div>
+    <div style="margin-top:1.2rem;border-top:1px solid #f0f2f5;padding-top:1rem;">
+      <div style="font-size:.78rem;font-weight:800;color:var(--ink);margin-bottom:.6rem;">Categories</div>
+      <div class="cat-grid">
+        <span class="cat-link">Gym &amp; Fitness</span><span class="cat-link">Diabetes Care</span><span class="cat-link">Heart Care</span>
+        <span class="cat-link">Weight Loss</span><span class="cat-link">Balanced Diet</span><span class="cat-link">Fresh Produce</span>
+        <span class="cat-link">Skin Care</span><span class="cat-link">Hypertension</span><span class="cat-link">Kidney Care</span>
+        <span class="cat-link">Rich Protein</span><span class="cat-link">High Fiber</span><span class="cat-link">Pantry Essentials</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="header-logo-icon" style="width:30px;height:30px;"><i class="fa-solid fa-leaf" style="font-size:.75rem;"></i></div>
+          <span class="logo-script" style="font-size:1.5rem;">Arokiam<span class="logo-dot-in" style="font-size:.8rem;">.in</span></span>
+        </div>
+        <div class="footer-socials">
+          <div class="soc-btn"><i class="fa-brands fa-instagram"></i></div>
+          <div class="soc-btn"><i class="fa-brands fa-facebook-f"></i></div>
+          <div class="soc-btn"><i class="fa-brands fa-linkedin-in"></i></div>
+        </div>
+        <div class="footer-copy">© Arokiam Marketplace Private Limited</div>
+        <div class="fssai-footer">Fssai lic no: 11224999000872</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Home</div>
+        <ul class="footer-links">
+          <li><a href="#">Delivery Areas</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Customer Support</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Arokiam Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Privacy Policy</div>
+        <ul class="footer-links">
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Responsible Disclosure</a></li>
+          <li><a href="#">Partner with Arokiam</a></li>
+          <li><a href="#">Deliver with Arokiam</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Download App</div>
+        <div class="app-btns">
+          <div class="app-btn">
+            <i class="fa-brands fa-google-play"></i>
+            <div><div class="app-btn-text">Get it on</div><div class="app-btn-name">Google Play</div></div>
+          </div>
+          <div class="app-btn">
+            <i class="fa-brands fa-apple"></i>
+            <div><div class="app-btn-text">Download on the</div><div class="app-btn-name">App Store</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span style="font-size:.78rem;color:var(--muted);">The place that fits all your health needs. Crafted with love from <strong style="color:var(--brand);">Arokiam Team</strong> ❤️</span>
+      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="fab-stack">
+  <button class="fab-btn fab-wa" title="WhatsApp" onclick="openModal('custom-modal')"><i class="fa-brands fa-whatsapp"></i></button>
+  <button class="fab-btn fab-ai" title="AI Guidance" onclick="openModal('ai-modal')"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
+</div>
+
+<div class="modal-overlay" id="ai-modal">
+  <div class="modal-box" style="max-width: 800px;">
+    <div class="modal-head" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;">
+      <div class="modal-head-text">
+        <div class="modal-sup" style="color:rgba(255,255,255,.7);">AI Health Guidance</div>
+        <div class="modal-head-title" style="color: #fff;">Day 1 to Day 100 roadmap</div>
+        <div class="modal-head-sub" style="color:rgba(255,255,255,.85);">A clear customer journey that explains why monthly subscriptions work better than single meals.</div>
+      </div>
+      <button class="modal-close" style="background:rgba(255,255,255,.15);color:#fff;" onclick="closeModal('ai-modal')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body" style="background: #f8fafc;">
+      <div class="roadmap-grid">
+        <div class="roadmap-card"><div class="roadmap-card-title" style="color:#4f46e5;">Days 1–10</div><div class="roadmap-card-text">Build routine, improve hydration, reduce junk cravings, and stabilize meal timing.</div></div>
+        <div class="roadmap-card"><div class="roadmap-card-title" style="color:#7c3aed;">Days 11–30</div><div class="roadmap-card-text">Visible energy improvement, better digestion, and more stable appetite control.</div></div>
+        <div class="roadmap-card"><div class="roadmap-card-title" style="color:#dc2626;">Days 31–60</div><div class="roadmap-card-text">Body composition starts changing. Consistency becomes easier with a fixed plan.</div></div>
+        <div class="roadmap-card"><div class="roadmap-card-title" style="color:#059669;">Days 61–100</div><div class="roadmap-card-text">The habit is now stronger than cravings. Subscriptions feel natural and sustainable.</div></div>
+      </div>
+      <div class="ai-reco-card">
+        <div class="ai-reco-title">AI recommendation</div>
+        <div class="ai-reco-text" id="ai-reco-text">Best starting point: Standard or Premium depending on protein needs. Vegan, Veg, Eggtarian, Non-Veg, Seafood, and Red Meat options can all be shown after the journey selection.</div>
+      </div>
+      <div class="modal-ctas">
+        <button class="btn-gate btn-gate-green" style="max-width:160px;" onclick="closeModal('ai-modal'); document.getElementById('plans-section').scrollIntoView({behavior:'smooth'});">See plans</button>
+        <button class="btn-custom-menu" onclick="closeModal('ai-modal'); openModal('custom-modal');">Talk to us</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="custom-modal">
+  <div class="modal-box" style="max-width:500px;">
+    <div class="modal-head" style="background:linear-gradient(135deg,#059669,#10b981);color:#fff;">
+      <div class="modal-head-text">
+        <div class="modal-sup" style="color:rgba(255,255,255,.7);">Custom Menu</div>
+        <div class="modal-head-title" style="color: #fff;">Talk to us on WhatsApp</div>
+        <div class="modal-head-sub" style="color:rgba(255,255,255,.85);">Ask for a custom meal plan, journey mix, or subscription</div>
+      </div>
+      <button class="modal-close" style="background:rgba(255,255,255,.15);color:#fff;" onclick="closeModal('custom-modal')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body" style="background:#fff;">
+      <ul class="custom-features">
+        <li><i class="fa-solid fa-circle-check" style="color:#10b981;margin-top:.1rem;"></i>Custom menu for weight loss, skin care, gym, diabetes, and more.</li>
+        <li><i class="fa-solid fa-circle-check" style="color:#10b981;margin-top:.1rem;"></i>Need a different weekly or monthly mix? We can build it.</li>
+        <li><i class="fa-solid fa-circle-check" style="color:#10b981;margin-top:.1rem;"></i>Use WhatsApp for quick support and fast order confirmation.</li>
+      </ul>
+      <button class="btn-whatsapp" onclick="openWhatsApp('Hi Arokiam! I need a custom health menu.')">
+        <i class="fa-brands fa-whatsapp" style="font-size:1.2rem;"></i> TALK TO US IN WHATSAPP
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="cart-overlay" onclick="toggleCart()"></div>
+<aside id="cart-drawer">
+  <div class="cart-head">
+    <div class="cart-head-left">
+      <div class="cart-icon-wrap"><i class="fa-solid fa-basket-shopping"></i></div>
+      <div><div class="cart-title">Your Order</div><div class="cart-sub">Subscriptions, add-ons, and individual items together.</div></div>
+    </div>
+    <button class="cart-close-btn" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cart-items-list"></div>
+  <div class="cart-nutri" id="cart-nutri-section">
+    <div class="nutri-header"><i class="fa-solid fa-user-doctor"></i><div><div class="nutri-title">Add Expert Nutritionist Guidance</div><div class="nutri-sub">Maximize results with 1-on-1 consultations alongside your meals.</div></div></div>
+    <div class="nutri-opts">
+      <button class="nutri-opt" onclick="setNutri(99,1,this)">1 Session<br/>₹99</button>
+      <button class="nutri-opt" onclick="setNutri(149,2,this)">2 Sessions<br/>₹149</button>
+      <button class="nutri-opt" onclick="setNutri(199,3,this)">3 Sessions<br/>₹199</button>
+      <button class="nutri-opt remove" onclick="setNutri(0,0,this)">Remove</button>
+    </div>
+  </div>
+  <div class="cart-foot">
+    <div class="cart-grand">
+      <div><div class="cart-grand-lbl">Grand Total</div><div class="cart-grand-val">₹<span id="cart-total">0</span></div></div>
+      <div style="text-align:right;font-size:.72rem;color:var(--muted);">Incl. of all taxes</div>
+    </div>
+    <div class="cart-totals" style="margin-top:.75rem;">
+      <div class="cart-total-row"><span>Item total</span><span>₹<span id="cart-subtotal">0</span></span></div>
+      <div class="cart-total-row" id="nutri-row" style="display:none;"><span>Nutritionist</span><span style="color:#4f46e5;">₹<span id="nutri-amount">0</span></span></div>
+      <div class="cart-total-row"><span>Delivery</span><span class="free">FREE</span></div>
+    </div>
+    <button class="btn-order-now" onclick="checkout()"><i class="fa-brands fa-whatsapp" style="font-size:1.2rem;"></i> ORDER NOW</button>
+  </div>
+</aside>
+
+<script>
+/** ═══════════ 1. DATABASE (FULL EXACT ARRAY) ═══════════ */
+const DB = [
+    // MEALBOXES (mb)
+    { id:'mb1', name:'Vegan Quinoa & Tofu Box', desc:'Ready-to-eat high fiber vegan meal.', price:280, time:'120 MIN', img:'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Mealbox','Weight Loss','Gym & Fitness'], macros:{cal:320,pro:18,fat:12,fib:14}, badge:'BEST SELLER', badgeClass:'' },
+    { id:'mb2', name:'Egg Power Spinach Box', desc:'Protein-rich egg meal with greens.', price:220, time:'120 MIN', img:'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=600&h=450&fit=crop', diets:['Eggtarian','Veg'], cats:['Mealbox','Gym & Fitness','Diabetes Care'], macros:{cal:280,pro:28,fat:14,fib:4}, badge:'PROTEIN', badgeClass:'protein' },
+    { id:'mb3', name:'Chicken Fitness Bowl', desc:'Lean chicken meal for active goals.', price:320, time:'120 MIN', img:'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&h=450&fit=crop', diets:['Non-Veg'], cats:['Mealbox','Gym & Fitness','Weight Loss'], macros:{cal:410,pro:36,fat:16,fib:5}, badge:'', badgeClass:'' },
+    { id:'mb4', name:'Keto Grilled Salmon Box', desc:'Premium zero-heavy-carb seafood meal.', price:590, time:'120 MIN', img:'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=450&fit=crop', diets:['Seafood','Non-Veg'], cats:['Mealbox','Skin Care','Weight Loss'], macros:{cal:450,pro:38,fat:28,fib:2}, badge:'PREMIUM', badgeClass:'' },
+    { id:'mb5', name:'Lean Mutton Power Bowl', desc:'Red meat option for bulk and strength.', price:450, time:'120 MIN', img:'https://images.unsplash.com/photo-1544025162-895964898135?w=600&h=450&fit=crop', diets:['Red Meat','Non-Veg'], cats:['Mealbox','Gym & Fitness'], macros:{cal:620,pro:45,fat:22,fib:6}, badge:'', badgeClass:'' },
+    { id:'mb6', name:'Low-Sodium Paneer Box', desc:'Fresh paneer with unsalted steamed veggies.', price:260, time:'120 MIN', img:'https://images.unsplash.com/photo-1567157577867-05ccb1388e6e?w=600&h=450&fit=crop', diets:['Veg'], cats:['Mealbox','Hypertension','Heart Care'], macros:{cal:350,pro:22,fat:18,fib:6}, badge:'HEART SAFE', badgeClass:'farm' },
+    { id:'mb7', name:'Low-Potassium Veg Medley', desc:'Kidney-friendly mix of cauliflower and beans.', price:240, time:'120 MIN', img:'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Mealbox','Kidney Care'], macros:{cal:210,pro:8,fat:6,fib:5}, badge:'KIDNEY CARE', badgeClass:'' },
+    { id:'mb8', name:'Millet Curd Rice Box', desc:'Gut-friendly cooling barnyard millet rice.', price:180, time:'120 MIN', img:'https://images.unsplash.com/photo-1548946522-4a313e8972a4?w=600&h=450&fit=crop', diets:['Veg'], cats:['Mealbox','Diabetes Care'], macros:{cal:280,pro:10,fat:8,fib:12} },
+    { id:'mb9', name:'Brown Rice Fish Thali', desc:'Whole grain rice with steamed fish curry.', price:340, time:'120 MIN', img:'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&h=450&fit=crop', diets:['Seafood','Non-Veg'], cats:['Mealbox','Skin Care','Heart Care'], macros:{cal:420,pro:32,fat:14,fib:8} },
+    { id:'mb10', name:'Antioxidant Berry Salad Box', desc:'Greens topped with fresh berries and seeds.', price:380, time:'120 MIN', img:'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Mealbox','Skin Care'], macros:{cal:220,pro:6,fat:12,fib:15}, badge:'GLOW', badgeClass:'protein' },
+
+    // FRESH (fr)
+    { id:'fr1', name:'Organic Spinach 250g', desc:'Fresh leafy greens for daily nutrition.', price:45, time:'120 MIN', img:'https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Fresh'], macros:{cal:23,pro:3,fat:0,fib:2}, badge:'FIBER RICH', badgeClass:'fiber' },
+    { id:'fr2', name:'Fresh Broccoli 500g', desc:'Light, fiber-rich cruciferous veg.', price:80, time:'120 MIN', img:'https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Fresh','Weight Loss'], macros:{cal:55,pro:4,fat:0,fib:5}, badge:'FARM FRESH', badgeClass:'farm' },
+    { id:'fr3', name:'Mixed Fruit Box', desc:'Seasonal fruit selection for snacks.', price:180, time:'120 MIN', img:'https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Fresh','Skin Care'], macros:{cal:150,pro:2,fat:1,fib:7}, badge:'BUY 3 GET 1', badgeClass:'buy3' },
+    { id:'fr4', name:'Hydroponic Lettuce', desc:'Crunchy, pesticide-free salad leaves.', price:110, time:'120 MIN', img:'https://images.unsplash.com/photo-1622206141846-99c7548f0791?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Fresh'], macros:{cal:15,pro:1,fat:0,fib:2} },
+    { id:'fr5', name:'Organic Avocados (2pc)', desc:'Healthy fats for skin and heart health.', price:350, time:'120 MIN', img:'https://images.unsplash.com/photo-1523049673857-eb18f1d74904?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Fresh','Skin Care','Heart Care'], macros:{cal:320,pro:4,fat:29,fib:14}, badge:'SUPERFOOD', badgeClass:'' },
+    { id:'fr6', name:'Rainbow Carrot Pack', desc:'Vibrant carrots rich in beta-carotene.', price:75, time:'120 MIN', img:'https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Fresh','Skin Care'], macros:{cal:41,pro:1,fat:0,fib:3} },
+    { id:'fr7', name:'Farm-to-Table Asparagus', desc:'Delicate spears for premium cooking.', price:220, time:'120 MIN', img:'https://images.unsplash.com/photo-1515471209610-dae1c92d8ce7?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Fresh','Gym & Fitness'], macros:{cal:20,pro:2,fat:0,fib:2} },
+    { id:'fr8', name:'Mini Cucumber Pack', desc:'Hydrating snacks for weight control.', price:60, time:'120 MIN', img:'https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Fresh','Weight Loss'], macros:{cal:16,pro:1,fat:0,fib:1} },
+    { id:'fr9', name:'Sweet Potato Bulk 1kg', desc:'Complex carbs for gym performance.', price:120, time:'120 MIN', img:'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Fresh','Gym & Fitness'], macros:{cal:86,pro:2,fat:0,fib:3} },
+    { id:'fr10', name:'Zucchini Green & Gold', desc:'Low carb alternative for pasta.', price:95, time:'120 MIN', img:'https://images.unsplash.com/photo-1557844352-761f2565b576?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Fresh','Weight Loss'], macros:{cal:17,pro:1,fat:0,fib:1} },
+
+    // PICKLES (pk/pn)
+    { id:'pk1', name:'Perandai Pickle', desc:'Ayurvedic vine pickle for joints.', price:160, time:'90 MIN', img:'https://images.unsplash.com/photo-1582285149666-5e589ec93626?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Pickles Veg'], macros:{cal:30,pro:0,fat:2,fib:2}, badge:'MEDICINAL', badgeClass:'fiber' },
+    { id:'pk2', name:'Tomato Thokku', desc:'Homestyle tomato preserve.', price:120, time:'90 MIN', img:'https://images.unsplash.com/photo-1601000938259-6bb94d9e1cf6?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Pickles Veg'], macros:{cal:40,pro:1,fat:3,fib:1}, badge:'', badgeClass:'' },
+    { id:'pk3', name:'Mango Pickle', desc:'Classic tangy seasonal pickle.', price:140, time:'90 MIN', img:'https://images.unsplash.com/photo-1582285149666-5e589ec93626?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Pickles Veg'], macros:{cal:50,pro:0,fat:4,fib:1}, badge:'', badgeClass:'' },
+    { id:'pk4', name:'Garlic Pickle', desc:'Bold flavor, simple ingredients.', price:140, time:'90 MIN', img:'https://images.unsplash.com/photo-1582285149666-5e589ec93626?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Pickles Veg'], macros:{cal:45,pro:1,fat:3,fib:1}, badge:'', badgeClass:'' },
+    { id:'pk5', name:'Lemon Pickle', desc:'Sharp citrus style with spices.', price:130, time:'90 MIN', img:'https://images.unsplash.com/photo-1582285149666-5e589ec93626?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Pickles Veg'], macros:{cal:42,pro:0,fat:3,fib:1}, badge:'', badgeClass:'' },
+    { id:'pk6', name:'Mixed Veg Pickle', desc:'Balanced mixed vegetables in oil.', price:150, time:'90 MIN', img:'https://images.unsplash.com/photo-1582285149666-5e589ec93626?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Pickles Veg'], macros:{cal:55,pro:1,fat:4,fib:2}, badge:'', badgeClass:'' },
+    { id:'pn1', name:'Mutton Pickle', desc:'Premium boneless mutton pieces.', price:450, time:'1-2 days', img:'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=450&fit=crop', diets:['Red Meat','Non-Veg'], cats:['Pickles Non-Veg'], macros:{cal:180,pro:12,fat:14,fib:0}, badge:'PREMIUM', badgeClass:'' },
+    { id:'pn2', name:'Fish Pickle', desc:'Coastal style fish preserve.', price:380, time:'1-2 days', img:'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=450&fit=crop', diets:['Seafood','Non-Veg'], cats:['Pickles Non-Veg'], macros:{cal:150,pro:10,fat:11,fib:0}, badge:'', badgeClass:'' },
+    { id:'pn3', name:'Prawn Pickle', desc:'Spicy prawn pickle for seafood lovers.', price:420, time:'1-2 days', img:'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=450&fit=crop', diets:['Seafood','Non-Veg'], cats:['Pickles Non-Veg'], macros:{cal:160,pro:11,fat:12,fib:0}, badge:'', badgeClass:'' },
+    { id:'pn4', name:'Chicken Pickle', desc:'Tender chicken chunks in local spices.', price:350, time:'1-2 days', img:'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=450&fit=crop', diets:['Non-Veg'], cats:['Pickles Non-Veg'], macros:{cal:170,pro:14,fat:11,fib:0} },
+
+    // DRINKS (dk)
+    { id:'dk1', name:'Badam Milk with Raisins', desc:'Rich, smooth, and lightly sweetened.', price:150, time:'90 MIN', img:'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&h=450&fit=crop', diets:['Veg'], cats:['Drinks','Skin Care'], macros:{cal:210,pro:8,fat:12,fib:3} },
+    { id:'dk2', name:'Rose Milk with Chia', desc:'Cooling body-heat control drink.', price:120, time:'90 MIN', img:'https://images.unsplash.com/photo-1622597467836-f38ec3f13904?w=600&h=450&fit=crop', diets:['Veg'], cats:['Drinks','Skin Care'], macros:{cal:180,pro:6,fat:5,fib:8} },
+    { id:'dk3', name:'ABC Glow Juice', desc:'Apple, beetroot, carrot. No sugar added.', price:160, time:'90 MIN', img:'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Drinks','Skin Care'], macros:{cal:90,pro:1,fat:0,fib:3} },
+    { id:'dk4', name:'Detox Green Drink', desc:'Leafy green refresh blend.', price:140, time:'90 MIN', img:'https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Drinks','Weight Loss'], macros:{cal:70,pro:2,fat:0,fib:5} },
+    { id:'dk5', name:'Herbal Wellness Drink', desc:'Tulsi-style herbal support blend.', price:90, time:'90 MIN', img:'https://images.unsplash.com/photo-1622597467836-f38ec3f13904?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Drinks'], macros:{cal:20,pro:0,fat:0,fib:1}, badge:'HERBAL', badgeClass:'fiber' },
+    { id:'dk6', name:'Ragi Kuzhu', desc:'High fiber traditional millet drink.', price:80, time:'Morning', img:'https://images.unsplash.com/photo-1514996937319-344454492b37?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Drinks','Weight Loss','Diabetes Care'], macros:{cal:110,pro:3,fat:1,fib:6}, badge:'FIBER', badgeClass:'fiber' },
+    { id:'dk7', name:'Cold Pressed Orange', desc:'Pure citrus energy boost.', price:180, time:'90 MIN', img:'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Drinks'], macros:{cal:95,pro:1,fat:0,fib:4}, badge:'FRESH PRESSED', badgeClass:'farm' },
+    { id:'dk8', name:'Watermelon Hydrator', desc:'99% hydration for post-gym skin care.', price:110, time:'90 MIN', img:'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Drinks','Skin Care'], macros:{cal:45,pro:1,fat:0,fib:1} },
+    { id:'dk9', name:'High-Protein Whey Shake', desc:'Vanilla protein boost for muscle recovery.', price:220, time:'90 MIN', img:'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=600&h=450&fit=crop', diets:['Veg'], cats:['Drinks','Gym & Fitness'], macros:{cal:240,pro:30,fat:4,fib:1}, badge:'GYM PRO', badgeClass:'protein' },
+    { id:'dk10', name:'Ginger Lemon Fat Burner', desc:'Metabolism-boosting warm/cold drink.', price:95, time:'90 MIN', img:'https://images.unsplash.com/photo-1622597467836-f38ec3f13904?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Drinks','Weight Loss'], macros:{cal:15,pro:0,fat:0,fib:0} },
+
+    // POWDERS & DRY FRUITS (pw/df)
+    { id:'pw1', name:'Arokiam Idly Podi', desc:'Traditional podi with sesame aroma.', price:150, time:'1-2 days', img:'https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Powders'], macros:{cal:45,pro:2,fat:3,fib:2}, badge:'SIGNATURE', badgeClass:'' },
+    { id:'df1', name:'Heart Care Daily Mix', desc:'30 daily pouches of nuts and seeds.', price:1800, time:'1-2 days', img:'https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Dry Fruits','Monthly','Heart Care'], macros:{cal:180,pro:5,fat:16,fib:4}, badge:'MONTHLY PACK', badgeClass:'buy3' },
+    { id:'df2', name:'Gym Bulk Trail Mix', desc:'Dates, figs, cashews, pumpkin seeds.', price:750, time:'1-2 days', img:'https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Dry Fruits','Gym & Fitness'], macros:{cal:480,pro:12,fat:38,fib:6} },
+    { id:'pw2', name:'Moringa Superfood Powder', desc:'Pure leaf extract for immunity.', price:220, time:'1-2 days', img:'https://images.unsplash.com/photo-1515471209610-dae1c92d8ce7?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Powders','Diabetes Care'], macros:{cal:10,pro:2,fat:0,fib:3}, badge:'IMMUNITY', badgeClass:'farm' },
+    { id:'df3', name:'Omega-3 Walnut Pack', desc:'Premium shelled walnuts for brain health.', price:550, time:'1-2 days', img:'https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Dry Fruits','Heart Care'], macros:{cal:185,pro:4,fat:18,fib:2} },
+    { id:'pw3', name:'Sprouted Sathu Maavu', desc:'Multigrain health mix for all ages.', price:280, time:'1-2 days', img:'https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?w=600&h=450&fit=crop', diets:['Veg'], cats:['Powders','Gym & Fitness'], macros:{cal:360,pro:15,fat:4,fib:8} },
+    { id:'df4', name:'Dried Cranberry Glow Pack', desc:'Sweetened tart berries for skin health.', price:420, time:'1-2 days', img:'https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Dry Fruits','Skin Care'], macros:{cal:120,pro:1,fat:0,fib:5} },
+    { id:'pw4', name:'Millet Dosa Mix', desc:'Quick breakfast mix with clean grains.', price:160, time:'1-2 days', img:'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Powders','Weekly'], macros:{cal:170,pro:5,fat:2,fib:4} },
+    { id:'df5', name:'Chilean Almonds 500g', desc:'High protein, raw snacking almonds.', price:650, time:'1-2 days', img:'https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Dry Fruits','Gym & Fitness'], macros:{cal:160,pro:6,fat:14,fib:4} },
+    { id:'pw5', name:'Arokiam Curry Powder', desc:'Authentic blend for daily gravies.', price:120, time:'1-2 days', img:'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Powders'], macros:{cal:20,pro:1,fat:1,fib:2} },
+
+    // PLANS (pl)
+    { id:'pl1', name:'Weekly Diabetes Care Plan', desc:'Low GI meals delivered daily.', price:1499, time:'Weekly plan', img:'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=600&h=450&fit=crop', diets:['Veg','Vegan'], cats:['Weekly','Mealbox','Diabetes Care'], macros:{cal:1200,pro:60,fat:40,fib:35}, badge:'WEEKLY', badgeClass:'farm' },
+    { id:'pl2', name:'Monthly Skin Glow Plan', desc:'Veg meals + glow juices monthly.', price:3999, time:'Monthly plan', img:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=450&fit=crop', diets:['Veg','Vegan'], cats:['Monthly','Mealbox','Skin Care'], macros:{cal:1400,pro:45,fat:35,fib:20}, badge:'MONTHLY', badgeClass:'buy3' },
+    { id:'pl3', name:'Monthly Keto Shred Plan', desc:'Custom keto boxes with support.', price:6999, time:'Monthly plan', img:'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&h=450&fit=crop', diets:['Non-Veg','Seafood'], cats:['Monthly','Mealbox','Weight Loss'], macros:{cal:1500,pro:120,fat:110,fib:15}, badge:'ELITE TIER', badgeClass:'' },
+    { id:'pl4', name:'Weekly Hypertension Plan', desc:'Low sodium meals with clean cooking.', price:1799, time:'Weekly plan', img:'https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop', diets:['Veg','Vegan'], cats:['Weekly','Mealbox','Hypertension'], macros:{cal:1100,pro:40,fat:28,fib:24}, badge:'WEEKLY', badgeClass:'farm' },
+    { id:'pl5', name:'Monthly Gym Bulk Plan', desc:'High protein, high consistency monthly.', price:7499, time:'Monthly plan', img:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=450&fit=crop', diets:['Eggtarian','Non-Veg','Red Meat'], cats:['Monthly','Mealbox','Gym & Fitness'], macros:{cal:2200,pro:140,fat:85,fib:18}, badge:'BULK', badgeClass:'protein' },
+    { id:'pl6', name:'Monthly Weight Loss Plan', desc:'Structured calorie deficit with variety.', price:5499, time:'Monthly plan', img:'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&h=450&fit=crop', diets:['Vegan','Veg','Eggtarian','Non-Veg'], cats:['Monthly','Mealbox','Weight Loss'], macros:{cal:1300,pro:70,fat:42,fib:25}, badge:'POPULAR', badgeClass:'buy3' },
+    { id:'pl7', name:'Monthly Kidney Care Plan', desc:'Low phosphorus, mineral-balanced meals.', price:7200, time:'Monthly plan', img:'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=450&fit=crop', diets:['Veg'], cats:['Monthly','Mealbox','Kidney Care'], macros:{cal:1800,pro:45,fat:60,fib:30}, badge:'SPECIALIZED', badgeClass:'' },
+    { id:'pl8', name:'7-Day Liver Detox Plan', desc:'Cruciferous heavy veg and juice cleanse.', price:1850, time:'Weekly plan', img:'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=450&fit=crop', diets:['Vegan','Veg'], cats:['Weekly','Mealbox','Weight Loss'], macros:{cal:900,pro:25,fat:20,fib:45}, badge:'DETOX', badgeClass:'farm' },
+    { id:'pl9', name:'Monthly PCOD/PCOS Balancing', desc:'Hormone-friendly complex carbs and low sugar.', price:5800, time:'Monthly plan', img:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=450&fit=crop', diets:['Veg','Non-Veg'], cats:['Monthly','Mealbox','Skin Care'], macros:{cal:1450,pro:80,fat:55,fib:40}, badge:'WOMEN HEALTH', badgeClass:'protein' },
+    { id:'pl10', name:'30-Day Lean Red Meat Plan', desc:'High iron and protein for active recovery.', price:8900, time:'Monthly plan', img:'https://images.unsplash.com/photo-1544025162-895964898135?w=600&h=450&fit=crop', diets:['Red Meat','Non-Veg'], cats:['Monthly','Mealbox','Gym & Fitness'], macros:{cal:2100,pro:160,fat:70,fib:20}, badge:'ELITE', badgeClass:'' }
+];
+
+const JOURNEY_CFG = {
+    'Weight Loss': { desc:'Calorie-controlled meals for sustainable fat loss.', prices:{std:3200,prm:5500,elt:8000}, planTitle:'Weight Loss Programs', planSub:'Structured clean satisfying meals.', reco:'Best starting point: Standard. Focus on fiber.' },
+    'Skin Care': { desc:'Antioxidant-heavy foods for internal glow.', prices:{std:3499,prm:4999,elt:7499}, planTitle:'Skin Care & Glow', planSub:'Glow drinks and hydration meals.', reco:'Start with Premium for ABC juices.' },
+    'Diabetes Care': { desc:'Low-GI menus to reduce sugar spikes.', prices:{std:3999,prm:5999,elt:8499}, planTitle:'Diabetes Care Programs', planSub:'Low-GI balanced macro meals.', reco:'Choose Millet-based boxes.' },
+    'Gym & Fitness': { desc:'High-protein menus built for recovery.', prices:{std:4999,prm:6999,elt:9999}, planTitle:'Gym & Fitness Programs', planSub:'High protein athletic goals.', reco:'Elite path for lean meats.' },
+    'Heart Care': { desc:'Heart-supportive meals with clean cooking.', prices:{std:3499,prm:5499,elt:8199}, planTitle:'Heart Health Programs', planSub:'Omega-rich cardiovascular support.', reco:'Omega-3 rich salmon options.' },
+    'Kidney Care': { desc:'Low potassium, phosphorus-managed meals.', prices:{std:4299,prm:6499,elt:9299}, planTitle:'Kidney Care Programs', planSub:'Mineral-managed safe nutrition.', reco:'Focus on specialized veg medleys.' },
+    'Hypertension': { desc:'Low sodium balance for blood pressure.', prices:{std:3299,prm:5299,elt:7799}, planTitle:'Hypertension Control', planSub:'Low sodium cleaner ingredients.', reco:'Fresh greens and low salt paths.' }
+};
+
+/** ═══════════ 2. GLOBAL STATE ═══════════ */
+let cart = JSON.parse(localStorage.getItem('arokiam_active_cart')) || {}; 
+let catFilter = 'All';
+let dietFilters = [];
+let searchQ = '';
+let currentPlanJourney = 'Gym & Fitness';
+let nutriCost = 0;
+let nutriSessions = 0;
+
+/** ═══════════ 3. AUTH & PERSISTENCE ENGINE ═══════════ */
+const AuthEngine = {
+    state: {
+        name: localStorage.getItem('arokiam_name') || "",
+        phone: localStorage.getItem('arokiam_phone') || "",
+        goal: localStorage.getItem('arokiam_goal') || "",
+        orders: JSON.parse(localStorage.getItem('arokiam_orders')) || [] 
+    },
+
+    saveStep1: function() {
+        const n = document.getElementById('inp-name').value.trim();
+        const p = document.getElementById('inp-phone').value.trim();
+        let ok = true;
+        document.getElementById('err-name').classList.remove('show');
+        document.getElementById('err-phone').classList.remove('show');
+        if (n.length < 4) { document.getElementById('err-name').classList.add('show'); ok = false; }
+        if (!/^[6-9]\d{9}$/.test(p)) { document.getElementById('err-phone').classList.add('show'); ok = false; }
+        if (ok) {
+            this.state.name = n; this.state.phone = p;
+            localStorage.setItem('arokiam_name', n);
+            localStorage.setItem('arokiam_phone', p);
+            this.gotoStep(2);
+        }
+    },
+
+    selectGoal: function(g) {
+        this.state.goal = g;
+        localStorage.setItem('arokiam_goal', g);
+        const nameFinal = document.getElementById('display-name-final');
+        if(nameFinal) nameFinal.innerText = this.state.name;
+        this.gotoStep(3);
+    },
+
+    gotoStep: function(n) {
+        ['gate-s1', 'gate-s2', 'gate-s3'].forEach(id => {
+            const el = document.getElementById(id);
+            if(el) el.style.display = 'none';
+        });
+        const target = document.getElementById(`gate-s${n}`);
+        if(target) target.style.display = 'block';
+        document.getElementById('gate-overlay').className = `step-${n}`;
+    },
+
+    unlockDashboard: function() {
+        const gate = document.getElementById('gate-overlay');
+        gate.style.transition = 'opacity 0.8s ease';
+        gate.style.opacity = '0';
+        gate.style.pointerEvents = 'none';
+        setTimeout(() => {
+            gate.style.display = 'none';
+            document.body.classList.remove('no-scroll');
+            this.personalizeUI();
+        }, 800);
+    },
+
+    personalizeUI: function() {
+        const { name, goal } = this.state;
+        if (!name) return;
+
+        // Header & Avatar
+        document.getElementById('hdr-start-free').style.display = 'none';
+        document.getElementById('hdr-signup').style.display = 'none';
+        document.getElementById('hdr-login').style.display = 'none';
+        const av = document.getElementById('hdr-avatar');
+        av.style.display = 'flex'; av.textContent = name.charAt(0).toUpperCase();
+
+        // Hero Badges
+        document.getElementById('hero-pf-badge').style.display = 'none';
+        const wb = document.getElementById('hero-welcome-badge');
+        if(wb) wb.style.display = 'flex';
+        const wt = document.getElementById('hero-welcome-text');
+        if(wt) wt.textContent = `${name.toUpperCase()}, WELCOME TO AROKIAM`;
+
+        // Dynamic Hero Title
+        const heroTitle = document.getElementById('hero-title');
+        const welcomeMap = {
+            'Weight Loss': `Continue Your <span class="accent">Weight Loss</span> Journey, ${name}`,
+            'Skin Care': `Unlock Your <span class="accent">Natural Glow</span> Today`,
+            'Gym & Fitness': `Continue Your <span class="accent">Gym & Fitness</span> Journey`,
+            'Diabetes Care': `Managing <span class="accent">Blood Sugar</span> With Precision`,
+            'Heart Care': `Prioritizing Your <span class="accent">Heart Health</span>`,
+            'Kidney Care': `Specialized <span class="accent">Kidney Nutrition</span>`,
+            'Hypertension': `Control <span class="accent">Blood Pressure</span> Simply`
+        };
+        if(heroTitle) heroTitle.innerHTML = welcomeMap[goal] || `Premium meals built for your <span class="accent">Health Journey</span>.`;
+
+        if (goal) {
+            selectPlanJourney(goal, null);
+            selectJourney(goal);
+        }
+    },
+
+    initSession: function() {
+        if (this.state.name && this.state.goal) {
+            document.getElementById('gate-overlay').style.display = 'none';
+            document.body.classList.remove('no-scroll');
+            this.personalizeUI();
+        } else if (this.state.name) {
+            this.gotoStep(2);
+        }
+    },
+
+    updateViewers: function() {
+        const el = document.getElementById('view-count');
+        if(!el) return;
+        el.innerText = Math.floor(Math.random() * (24 - 8 + 1)) + 8;
+        setTimeout(() => this.updateViewers(), 8000);
+    }
+};
+
+/** ═══════════ 4. CORE MENU & CART FUNCTIONS ═══════════ */
+
+function toggleDiet(d) {
+    dietFilters.includes(d) ? dietFilters = dietFilters.filter(x => x !== d) : dietFilters.push(d);
+    document.querySelectorAll('.diet-chip').forEach(btn => {
+        btn.classList.toggle('on', dietFilters.includes(btn.textContent.trim()));
+    });
+    renderProducts();
+    document.getElementById('menu-section').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function updateCart(id, delta) {
+    const prod = DB.find(p => p.id === id);
+    if (!prod) return;
+    if (!cart[id]) cart[id] = {...prod, qty: 0};
+    cart[id].qty += delta;
+    if (cart[id].qty <= 0) delete cart[id];
+    localStorage.setItem('arokiam_active_cart', JSON.stringify(cart));
+    renderProducts(); renderCart(); updateCartBadge();
+}
+
+function updateCartBadge() {
+    const total = Object.values(cart).reduce((s, i) => s + i.qty, 0);
+    const badge = document.getElementById('cart-badge');
+    if(badge) { badge.textContent = total; badge.classList.toggle('show', total > 0); }
+}
+
+function renderProducts() {
+    const grid = document.getElementById('product-grid');
+    const empty = document.getElementById('empty-state');
+    const filtered = DB.filter(p => {
+        const catOk = catFilter === 'All' || p.cats.includes(catFilter);
+        const dietOk = dietFilters.length === 0 || dietFilters.some(d => p.diets.includes(d));
+        const searchOk = !searchQ || [p.name, p.desc, ...p.cats, ...p.diets].join(' ').toLowerCase().includes(searchQ);
+        return catOk && dietOk && searchOk;
+    });
+
+    document.getElementById('menu-count').textContent = 'Showing ' + filtered.length + ' items';
+    if (!filtered.length) { grid.style.display = 'none'; empty.style.display = 'block'; return; }
+    
+    grid.style.display = 'grid'; empty.style.display = 'none';
+    grid.innerHTML = filtered.map(p => {
+        const qty = cart[p.id]?.qty || 0;
+        const badge = p.badge ? `<div class="prod-badge ${p.badgeClass}">${p.badge}</div>` : '';
+        const addCtrl = qty > 0 
+            ? `<div class="qty-ctrl"><button onclick="updateCart('${p.id}',-1)">−</button><span>${qty}</span><button onclick="updateCart('${p.id}',1)">+</button></div>`
+            : `<button class="btn-add" onclick="updateCart('${p.id}',1)">ADD</button>`;
+        return `
+        <article class="prod-card">
+          <div class="prod-img-wrap">
+            ${badge}
+            <img src="${p.img}" alt="${p.name}" loading="lazy"/>
+            <div class="prod-time-badge"><i class="fa-regular fa-clock"></i>${p.time}</div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-top">${dotIcon(p)}<div class="prod-name">${p.name}</div></div>
+            <div class="prod-desc">${p.desc}</div>
+            <div class="macros-row">
+              <div class="macro-cell"><div class="mv">${p.macros.cal}</div><div class="mk">kcal</div></div>
+              <div class="macro-cell pro"><div class="mv">${p.macros.pro}g</div><div class="mk">PRO</div></div>
+              <div class="macro-cell fat"><div class="mv">${p.macros.fat || 0}g</div><div class="mk">FAT</div></div>
+              <div class="macro-cell fib"><div class="mv">${p.macros.fib}g</div><div class="mk">FIB</div></div>
+            </div>
+            <div class="prod-footer">
+              <div><div class="prod-price-lbl">PRICE</div><div class="prod-price">₹${p.price}</div></div>
+              ${addCtrl}
+            </div>
+          </div>
+        </article>`;
+    }).join('');
+}
+
+function renderCart() {
+    const list = document.getElementById('cart-items-list');
+    const items = Object.values(cart);
+    if (!items.length) {
+        list.innerHTML = `<div class="cart-empty"><i class="fa-solid fa-basket-shopping"></i><p>Your cart is empty.<br/>Add mealboxes, subscription plans, or add-ons.</p></div>`;
+        document.getElementById('cart-subtotal').textContent = '0';
+        document.getElementById('cart-total').textContent = '0';
+        return;
+    }
+    let subtotal = 0;
+    list.innerHTML = items.map(it => {
+        subtotal += it.price * it.qty;
+        const vIcon = (it.diets.includes('Veg') || it.diets.includes('Vegan'))
+            ? '<div class="dot-veg" style="width:12px;height:12px;"></div>'
+            : '<div class="dot-nonveg" style="width:12px;height:12px;"></div>';
+        return `
+        <div class="cart-item-card">
+          <img src="${it.img}" class="cart-item-img" alt="${it.name}"/>
+          <div class="cart-item-body">
+            <div style="display:flex;align-items:center;gap:.35rem;">${vIcon}<div class="cart-item-name">${it.name}</div></div>
+            <div class="cart-item-meta">${it.time}</div>
+            <div class="cart-item-row">
+              <div class="cart-item-price">₹${it.price}</div>
+              <div class="cart-qty">
+                <button onclick="updateCart('${it.id}',-1)">−</button>
+                <span>${it.qty}</span>
+                <button onclick="updateCart('${it.id}',1)">+</button>
+              </div>
+            </div>
+          </div>
+        </div>`;
+    }).join('');
+    document.getElementById('cart-subtotal').textContent = subtotal.toLocaleString('en-IN');
+    document.getElementById('cart-total').textContent = (subtotal + nutriCost).toLocaleString('en-IN');
+}
+
+function checkout() {
+    const items = Object.values(cart);
+    if (!items.length) { alert('Your cart is empty.'); return; }
+    let msg = `🌿 *New Order from ${AuthEngine.state.name} (${AuthEngine.state.phone}):*\n\n`;
+    let sub = 0;
+    items.forEach(it => { msg += `• ${it.name} x${it.qty} = ₹${(it.price*it.qty).toLocaleString('en-IN')}\n`; sub += it.price*it.qty; });
+    if (nutriSessions > 0) msg += `\n*Add-on:* Nutritionist ${nutriSessions} session(s) = ₹${nutriCost}\n`;
+    msg += `\n*Grand Total:* ₹${(sub+nutriCost).toLocaleString('en-IN')}\n\nPlease confirm my order!`;
+    
+    // Save to History
+    const order = { id: 'ORD-'+Date.now(), date: new Date().toLocaleString(), items: items, total: sub+nutriCost };
+    AuthEngine.state.orders.push(order);
+    localStorage.setItem('arokiam_orders', JSON.stringify(AuthEngine.state.orders));
+
+    cart = {}; localStorage.removeItem('arokiam_active_cart');
+    renderProducts(); renderCart(); updateCartBadge();
+    window.open('https://wa.me/919876543210?text='+encodeURIComponent(msg), '_blank');
+}
+
+/** ═══════════ 5. UTILITIES ═══════════ */
+function selectPlanJourney(j, tabEl) {
+    currentPlanJourney = j || 'Gym & Fitness';
+    const cfg = JOURNEY_CFG[currentPlanJourney] || JOURNEY_CFG['Gym & Fitness'];
+    document.getElementById('plan-journey-title').textContent = cfg.planTitle;
+    document.getElementById('plan-journey-sub').textContent = cfg.planSub;
+    document.getElementById('tier-price-std').innerHTML = '₹' + cfg.prices.std.toLocaleString('en-IN') + '<span>/mo</span>';
+    document.getElementById('tier-price-prm').innerHTML = '₹' + cfg.prices.prm.toLocaleString('en-IN') + '<span>/mo</span>';
+    document.getElementById('tier-price-elt').innerHTML = '₹' + cfg.prices.elt.toLocaleString('en-IN') + '<span>/mo</span>';
+    
+    document.querySelectorAll('.journey-tab').forEach(t => t.classList.remove('active'));
+    if (!tabEl) tabEl = Array.from(document.querySelectorAll('.journey-tab')).find(t => t.innerText.includes(j));
+    if (tabEl) tabEl.classList.add('active');
+}
+
+function selectJourney(j) {
+    document.querySelectorAll('.journey-circle').forEach(c => {
+        const name = c.querySelector('.j-name').textContent.trim();
+        c.classList.toggle('active-journey', name === j);
+        const wrap = c.querySelector('.j-circle-wrap');
+        if(wrap) wrap.style.borderColor = (name === j) ? '#22c55e' : '#e9ecef';
+    });
+}
+
+function dotIcon(p) {
+    if (p.diets.includes('Vegan') || p.diets.includes('Veg')) return '<div class="dot-veg"></div>';
+    if (p.diets.includes('Eggtarian')) return '<div class="dot-egg"></div>';
+    return '<div class="dot-nonveg"></div>';
+}
+
+function applyCategory(cat, btn) {
+    catFilter = cat;
+    document.querySelectorAll('.chip-row .chip').forEach(c => c.classList.remove('on'));
+    btn.classList.add('on');
+    document.getElementById('menu-title').textContent = cat === 'All' ? 'Explore Entire Menu' : cat + ' Menu';
+    showClearBtn();
+    renderProducts();
+    document.getElementById('menu-section').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function toggleCart() {
+    const drw = document.getElementById('cart-drawer');
+    drw.classList.toggle('open');
+    document.getElementById('cart-overlay').style.display = drw.classList.contains('open') ? 'block' : 'none';
+}
+
+function handleSearch(e) { searchQ = e.target.value.trim().toLowerCase(); showClearBtn(); renderProducts(); }
+function openModal(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow = ''; }
+function openGate() { document.getElementById('gate-overlay').style.display = 'flex'; AuthEngine.gotoStep(1); }
+function setNutri(cost, sessions, btn) { 
+    nutriCost = cost; nutriSessions = sessions; 
+    document.querySelectorAll('.nutri-opt').forEach(b => b.classList.remove('active'));
+    if (cost > 0 && btn) btn.classList.add('active');
+    document.getElementById('nutri-row').style.display = cost > 0 ? 'flex' : 'none';
+    document.getElementById('nutri-amount').textContent = cost;
+    renderCart(); 
+}
+function clearAllFilters() { dietFilters = []; catFilter = 'All'; searchQ = ''; document.getElementById('search-input').value = ''; document.querySelectorAll('.chip-row .chip').forEach(c => c.classList.remove('on')); document.querySelector('.chip-row .chip').classList.add('on'); document.querySelectorAll('[id^="df-"]').forEach(b => b.classList.remove('on')); document.getElementById('menu-title').textContent = 'Explore Entire Menu'; document.getElementById('clear-filters-btn').style.display = 'none'; renderProducts(); }
+function showClearBtn() { const show = catFilter !== 'All' || dietFilters.length > 0 || searchQ; document.getElementById('clear-filters-btn').style.display = show ? 'inline-block' : 'none'; }
+function openWhatsApp(msg) { window.open('https://wa.me/919876543210?text='+encodeURIComponent(msg), '_blank'); }
+
+/** ═══════════ 6. BOOT ═══════════ */
+document.addEventListener('DOMContentLoaded', () => {
+    AuthEngine.initSession();
+    AuthEngine.updateViewers();
+    renderProducts();
+    updateCartBadge();
+    renderCart();
+});
+</script>
