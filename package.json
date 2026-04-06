@@ -1,0 +1,11 @@
+{
+  "name": "arokiam-fullstack",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "deploy": "echo 'Deployed!'"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
